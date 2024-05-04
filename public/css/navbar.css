@@ -201,6 +201,10 @@ body {
 	width: 300px;
 	z-index: -1;
   }
+
+  li.borderless {
+	border-top: 0 none;
+  }
   
   @media (max-width: 991.98px) {
 	.sidebar {
