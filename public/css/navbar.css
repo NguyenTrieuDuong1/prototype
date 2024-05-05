@@ -244,10 +244,12 @@ body {
   
   .sidebar-menu li a.nav-link.active {
 	font-weight: bold;
+	background-color: pink;
   }
   
   .sidebar-menu li a.nav-link.active img.icon {
 	border: 2px solid black;
+	
   }
   
   .sidebar-menu li a.nav-link .icon {
@@ -268,6 +270,4 @@ body {
   .rounded-circle {
 	border-radius: 100%;
   }
-
-/* footer */
 
