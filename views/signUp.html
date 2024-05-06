@@ -61,35 +61,39 @@
 
     <main>
 
+        <div class="sign-up">
+            <h1>Sign Up</h1>
+        </div>
+
         <form action="/signup" method="POST" id="signUp-form">
 
 
             <div class="form">
                 <input type="text" id="name" class="form__input" autocomplete="off" placeholder="">
-                <!-- <label for="name" class="form__label">Your Name</label> -->
-                <div class="form__label">Your Name</div>
+                <label for="name" class="form__label">Your Name</label>
+                <!-- <div class="form__label">Your Name</div> -->
             </div>
 
             <div class="form">
                 <input type="email" id="email" class="form__input" autocomplete="off" placeholder="">
-                <!-- <label for="email" class="form__label">Email</label> -->
-                <div class="form__label">Email</div>
+                <label for="email" class="form__label">Email</label>
+                <!-- <div class="form__label">Email</div> -->
             </div>
 
             <div class="form">
                 <input type="password" id="password" class="form__input" autocomplete="off" name="password"
                     placeholder="">
-                <!-- <label for="password" class="form__label">Password</label> -->
-                <div class="form__label">Password</div>
+                <label for="password" class="form__label">Password</label>
+                <!-- <div class="form__label">Password</div> -->
                 <i class="fa-solid fa-eye-slash" id="show-password"></i>
             </div>
 
             <div class="form">
-                <input type="password" id="password" class="form__input" autocomplete="off"  name="password" placeholder="">
-                <!-- <label for="password" class="form__label">Confirm Password</label> -->
+                <input type="password" id="confirm-password" class="form__input" autocomplete="off"  name="confirm-password" placeholder="">
+                <label for="confirm-password" class="form__label">Confirm Password</label>
                 
-                <div class="form__label">Confirm Password</div>
-                <i class="fa-solid fa-eye-slash" id="show-password"></i>
+                <!-- <div class="form__label" aria-label="Password">Confirm Password</div> -->
+                <i class="fa-solid fa-eye-slash" id="show-confirm-password"></i>
             </div>
         
         <div class="g-recaptcha" data-sitekey="6Lfjw9EpAAAAAEO3-vKX6BCn1mKNKPEWfuk_ail8"></div>
@@ -102,6 +106,23 @@
             </label>
           </div>
 
+        <div>
+            <input class="btn btn-primary" type="submit" value="Create Account">
+        </div>
+
+        <div class="sign-in">
+            <p>Already have an account? <a href="/login">Sign In</a></p>
+        </div>
+
+        <div class="signUpWith">
+            <p>Or</p>
+
+        </div>
+
+        <div class="social-media"> 
+            <a href="#" class="btn btn-primary">Google</a>
+          
+        </div>
           <div>
             <input type="submit" class="btn btn-primary" value="Create Account">
         </div>

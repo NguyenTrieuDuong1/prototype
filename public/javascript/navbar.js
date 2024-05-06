@@ -1,97 +1,92 @@
 // ---------Responsive-navbar-active-animation-----------
 feather.replace()
 
-function test(){
-	var tabsNewAnim = $('#navbarSupportedContent');
-	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-	var activeItemNewAnim = tabsNewAnim.find('.active');
-	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-	var itemPosNewAnimTop = activeItemNewAnim.position();
-	var itemPosNewAnimLeft = activeItemNewAnim.position();
-	$(".hori-selector").css({
-		"top":itemPosNewAnimTop.top + "px", 
-		"left":itemPosNewAnimLeft.left + "px",
-		"height": activeWidthNewAnimHeight + "px",
-		"width": activeWidthNewAnimWidth + "px"
-	});
-	$("#navbarSupportedContent").on("click","li",function(e){
-		$('#navbarSupportedContent ul li').removeClass("active");
-		$(this).addClass('active');
-		var activeWidthNewAnimHeight = $(this).innerHeight();
-		var activeWidthNewAnimWidth = $(this).innerWidth();
-		var itemPosNewAnimTop = $(this).position();
-		var itemPosNewAnimLeft = $(this).position();
-		$(".hori-selector").css({
-			"top":itemPosNewAnimTop.top + "px", 
-			"left":itemPosNewAnimLeft.left + "px",
-			"height": activeWidthNewAnimHeight + "px",
-			"width": activeWidthNewAnimWidth + "px"
-		});
-	});
+function test() {
+    var tabsNewAnim = document.getElementById('navbarSupportedContent');
+    var activeItemNewAnim = tabsNewAnim.querySelector('.active');
+    var activeWidthNewAnimHeight = activeItemNewAnim.offsetHeight;
+    var activeWidthNewAnimWidth = activeItemNewAnim.offsetWidth;
+    var itemPosNewAnimTop = activeItemNewAnim.offsetTop;
+    var itemPosNewAnimLeft = activeItemNewAnim.offsetLeft;
+
+    document.querySelector(".hori-selector").style.cssText = 
+        "top:" + itemPosNewAnimTop + "px; left:" + itemPosNewAnimLeft + "px; height:" + activeWidthNewAnimHeight + "px; width:" + activeWidthNewAnimWidth + "px";
+
+    tabsNewAnim.querySelectorAll("li").forEach(function(li) {
+        li.addEventListener('click', function(e) {
+            tabsNewAnim.querySelectorAll('ul li').forEach(function(uli) {
+                uli.classList.remove("active");
+            });
+            this.classList.add('active');
+            var activeWidthNewAnimHeight = this.offsetHeight;
+            var activeWidthNewAnimWidth = this.offsetWidth;
+            var itemPosNewAnimTop = this.offsetTop;
+            var itemPosNewAnimLeft = this.offsetLeft;
+            document.querySelector(".hori-selector").style.cssText = 
+                "top:" + itemPosNewAnimTop + "px; left:" + itemPosNewAnimLeft + "px; height:" + activeWidthNewAnimHeight + "px; width:" + activeWidthNewAnimWidth + "px";
+        });
+    });
 }
-$(document).ready(function(){
-	setTimeout(function(){ test(); });
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(test, 0);
 });
-$(window).on('resize', function(){
-	setTimeout(function(){ test(); }, 500);
+
+window.addEventListener('resize', function() {
+    setTimeout(test, 500);
 });
-$(".navbar-toggler").click(function(){
-	$(".navbar-collapse").slideToggle(300);
-	setTimeout(function(){ test(); });
+
+document.querySelector(".navbar-toggler").addEventListener('click', function() {
+    var navbarCollapse = document.querySelector(".navbar-collapse");
+    if (navbarCollapse.style.display === "none") {
+        navbarCollapse.style.display = "";
+    } else {
+        navbarCollapse.style.display = "none";
+    }
+    setTimeout(test, 0);
 });
+
 
 
 
 // --------------add active class-on another-page move----------
-jQuery(document).ready(function($){
-	// Get current path and find target link
-	var path = window.location.pathname.split("/").pop();
-
-	// Account for home page with empty path
-	if ( path == '' ) {
-		path = 'index.html';
-	}
-
-	var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
-	// Add active class to target link
-	target.parent().addClass('active');
-});
-
 
 
 
 //Add active class on another page linked
 //==========================================
-$(window).on('load',function () {
-    var current = location.pathname;
-    console.log(current);
-    $('#navbarSupportedContent ul li a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.parent().addClass('active');
-            $this.parents('.menu-submenu').addClass('show-dropdown');
-            $this.parents('.menu-submenu').parent().addClass('active');
-        }else{
-            $this.parent().removeClass('active');
-        }
-    })
-});
+// $(window).on('load',function () {
+//     var current = location.pathname;
+//     console.log(current);
+//     $('#navbarSupportedContent ul li a').each(function(){
+//         var $this = $(this);
+//         // if the current path is like this link, make it active
+//         if($this.attr('href').indexOf(current) !== -1){
+//             $this.parent().addClass('active');
+//             $this.parents('.menu-submenu').addClass('show-dropdown');
+//             $this.parents('.menu-submenu').parent().addClass('active');
+//         }else{
+//             $this.parent().removeClass('active');
+//         }
+//     })
+// });
 
 // sidebar js
 
 // Sidebar toggle
-jQuery(document).ready(function($){
-	// Get current path and find target link
-	var path = window.location.pathname.split("/").pop();
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current path and find target link
+    var path = window.location.pathname.split("/").pop();
 
-	// Account for home page with empty path
-	if ( path == '' ) {
-		path = 'index.html';
-	}
+    // Account for home page with empty path
+    if ( path == '' ) {
+        path = 'index.html';
+    }
 
-	var target = $('.nav-link ul li a[href="'+path+'"]');
-	// Add active class to target link
-	target.parent().addClass('active');
+    var navLinks = document.querySelectorAll('.nav-link ul li a');
+    navLinks.forEach(function(navLink) {
+        if(navLink.getAttribute('href') === path) {
+            navLink.parentNode.classList.add('active');
+        }
+    });
 });
