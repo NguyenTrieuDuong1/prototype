@@ -55,7 +55,7 @@ main{
     transition: all 160ms ease-in;
 }
 
-.fa-eye{
+.fa-solid{
     position: absolute;
     top: 1.3rem;
     right: 1rem;
