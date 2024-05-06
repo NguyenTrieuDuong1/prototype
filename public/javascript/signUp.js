@@ -9,3 +9,20 @@ showPassword.addEventListener("click", function(){
 })
 
 
+const showConfirmPassword = document.querySelector("#show-confirm-password");
+const confirmPasswordField = document.querySelector("#confirm-password");
+
+showConfirmPassword.addEventListener("click", function(){
+    if(confirmPasswordField.getAttribute("type") === "password") {
+        confirmPasswordField.setAttribute("type", "text");
+        this.classList.remove("fa-eye");
+        this.classList.add("fa-eye-slash");
+    } else {
+        confirmPasswordField.setAttribute("type", "password");
+        this.classList.remove("fa-eye-slash");
+        this.classList.add("fa-eye");
+    }
+});
+
+// validation form sign up 
+
