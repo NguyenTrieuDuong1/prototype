@@ -7,33 +7,164 @@
 }
 
 body{
-    font-family: poppins;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh; 
     font-size: 1.2rem;
-    gap: 90px;
     background-image: linear-gradient(#FDFDFD,#FFEDFF,#FFDAF2,#F4D6FF,#FED9FF,#F7D7FF,#A7B5FF);
 }
 
-main{
-    background-color: #FDFDFD;
-    padding: 40px;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+nav {
+    padding: 20px 50px;
+    margin: 10px;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+
 }
+
+/* logo */
+.navbar-logo{
+	padding: 15px;
+	color: #F03167;
+	font-family: 'Cherry Bomb One', sans-serif !important;
+}
+
+nav a:hover{
+    color: #ff779e;
+}
+
+nav a:focus{
+    color: #f5347f;
+}
+
+/* theme */
+/* The switch - the box around the slider */
+.switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: absolute;
+    top: 50%;
+    right: 15rem;
+    transform: translateY(-50%);
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  nav{
+    padding: 20px 50px;
+    margin: 10px;   
+  }
+
+  /* sign in button */
+  nav button {
+    font-family: 'Cherry Bomb One', sans-serif !important;
+    padding: 10px 20px;
+    margin-right: 50px;
+    border-style: solid;
+    border: 2px solid #FEACC3;
+    border-radius: 20px;
+    color: #F03167;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  nav button:hover{
+    background-color: #FEACC3;
+    color: #fff;
+  }
+
+    nav button:focus{
+        background-color: #F03167;
+        color: #fff;
+        border: none;
+        outline: none;
+    }
+
+    form > p{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: -50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.signUpForm{
+    position: relative;
+    width: 600px; 
+    gap: 20px;
+    padding: 50px;
+    top: -10px;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 .form{
     position: relative;
-    width: 400px; 
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    padding: 40px;
+    width: 500px; 
+    gap: 20px;
+    padding: 50px;
     border-radius: 1rem;
     
 }
@@ -87,6 +218,20 @@ main{
     font-size: 0.8rem;
     left: 0.8rem;
 }
+
+
+form button{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #feacc4;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-in;
+}
+
 
 
 
