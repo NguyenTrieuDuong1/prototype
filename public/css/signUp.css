@@ -24,17 +24,21 @@ nav {
 
 /* logo */
 .navbar-logo{
+    font-size: 2rem;
+    font-family: 'Cherry Bomb One', sans-serif !important;
+    color: #F03167 !important;
 	padding: 15px;
-	color: #F03167;
-	font-family: 'Cherry Bomb One', sans-serif !important;
+	
 }
 
+
+
 nav a:hover{
-    color: #ff779e;
+    color: #ff779e !important;
 }
 
 nav a:focus{
-    color: #f5347f;
+    color: #f5347f !important;
 }
 
 /* theme */
@@ -101,6 +105,9 @@ nav a:focus{
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: 'Cherry Bomb One', sans-serif;
+        letter-spacing: 3px;
+        color: 	#05081c;
 
     }
 
@@ -222,15 +229,131 @@ nav a:focus{
 
 form button{
     padding: 15px;
+    margin-bottom: 30px;
     width: 100%;
     border: none;
-    border-radius: 0.5rem;
-    background-color: #feacc4;
-    color: white;
-    font-size: 1rem;
+    border-radius: 3rem;
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    color: black;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 200ms ease-in;
+    font-family: "Cherry Bomb One", sans-serif;
 }
+
+.form-check{
+    padding: 15px;
+    transform: translate(0px, -25px);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.form-check div{
+    padding: 10px;
+    transform: translate(-45px, -25px);
+
+}
+
+.recaptcha {
+    padding-bottom: 30px;
+    transform: translate(0px, -10px);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+
+.recaptcha div:nth-child(2){
+    padding: 10px;
+    transform: translate(-30px, 10px);
+}
+
+.sign-in{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 16px;
+    letter-spacing: normal;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign-in a{
+    color: #feacc4;
+    text-decoration: none;
+}
+
+.signUpWith p{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: normal;
+    font-weight: light;
+    font-style: italic;
+    line-height: 0.1rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.signUpWith p::before, .signUpWith p::after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+
+.signUpWith p::before{
+    margin-right: 0.25em;
+}
+
+.signUpWith p::after{
+    margin-left: 0.25em;
+}
+
+.social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    border: 3px solid #feacc4;
+    border-radius: 3rem;
+}
+
+/* .icon-display {
+    position: absolute;
+    top: 4rem;
+    left: 0.5rem;
+    color: #ff0000;
+    display: inline;
+    cursor: pointer;
+}
+*/
+.icon-error {
+    position: relative;
+    top: 0.1rem;
+    color: #ff0000;
+    display: none;
+    cursor: pointer;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #ff0000;
+    position: absolute;
+    top: 3.7rem;
+}
+
 
 
 

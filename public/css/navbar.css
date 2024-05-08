@@ -23,10 +23,13 @@ i {
 .navbar-mainbg{
 	background-color: white;
 	padding: 0px;
+	
 }
 #navbarSupportedContent{
 	overflow: hidden;
-	position: relative;
+	position: absolute;
+	right: 0;
+
 }
 #navbarSupportedContent ul{
 	padding: 0px;
@@ -72,7 +75,7 @@ i {
 }
 .hori-selector{
 	display:inline-block;
-	position:absolute;
+	position: absolute;
 	height: 100%;
 	top: 0px;
 	left: 0px;
