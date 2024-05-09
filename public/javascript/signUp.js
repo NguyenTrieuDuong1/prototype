@@ -136,16 +136,16 @@ document.getElementById('form').addEventListener('submit', function(event) {
         return false;
     }
 
-    // let captchaError = document.getElementById('captcha-error');
-    // if (!document.getElementById('captcha').checked) {
+    // if (document.getElementById('captcha').value.length <= 0){
     //     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     //     captchaError.innerHTML = iconErr + 'Please check the captcha';
     //     return false;
     // }
 
 
-
     // alert('Form is valid and ready to submit');
     swal("Good job!", "You have successfully created an account!", "success");
     return true;
 });
+
+

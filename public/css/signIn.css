@@ -1,0 +1,131 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh; 
+    font-size: 1.2rem;
+    background-image: linear-gradient(#FDFDFD,#FFEDFF,#FFDAF2,#F4D6FF,#FED9FF,#F7D7FF,#A7B5FF);
+}
+
+nav {
+    padding: 30px 50px;
+    position: fixed; 
+    top: 0.5rem; 
+    width: 100%; 
+
+}
+
+
+
+/* logo */
+.navbar-logo{
+    font-size: 2rem;
+    font-family: 'Cherry Bomb One', sans-serif !important;
+    color: #F03167 !important;
+	  padding: 2rem;
+	
+}
+
+
+
+nav a:hover{
+    color: #ff779e !important;
+}
+
+nav a:focus{
+    color: #f5347f !important;
+}
+
+/* theme */
+/* The switch - the box around the slider */
+.switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: absolute;
+    top: 50%;
+    right: 15rem;
+    transform: translateY(-50%);
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+ 
+
+  /* sign in button */
+  nav button {
+    font-family: 'Cherry Bomb One', sans-serif !important;
+    padding: 10px 20px;
+    margin-right: 50px;
+    border: 2px solid #FEACC3;
+    border-radius: 20px;
+    color: #F03167;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  nav button:hover{
+    background-color: #FEACC3;
+    color: #fff;
+  }
+
+    nav button:focus{
+        background-color: #F03167;
+        color: #fff;
+        border: none;
+        outline: none;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4f4f5;
+        transition: .4s;
+        border-radius: 30px;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: var(--size-of-icon,1.4em);
+        width: var(--size-of-icon,1.4em);
+        border-radius: 20px;
+        left: var(--slider-offset,0.3em);
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+        ;
+       transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #303136;
+      }
+      
+      input:checked + .slider:before {
+        left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+        background: #303136;
+        /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+        box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+      }
