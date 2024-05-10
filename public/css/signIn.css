@@ -1,131 +1,301 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh; 
-    font-size: 1.2rem;
-    background-image: linear-gradient(#FDFDFD,#FFEDFF,#FFDAF2,#F4D6FF,#FED9FF,#F7D7FF,#A7B5FF);
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    #fdfdfd,
+    #ffedff,
+    #ffdaf2,
+    #f4d6ff,
+    #fed9ff,
+    #f7d7ff,
+    #a7b5ff
+  );
 }
 
 nav {
-    padding: 30px 50px;
-    position: fixed; 
-    top: 0.5rem; 
-    width: 100%; 
-
+  padding: 30px 50px;
+  position: fixed;
+  top: 0.5rem;
+  width: 100%;
 }
-
-
 
 /* logo */
-.navbar-logo{
-    font-size: 2rem;
-    font-family: 'Cherry Bomb One', sans-serif !important;
-    color: #F03167 !important;
-	  padding: 2rem;
-	
+.navbar-logo {
+  font-size: 2rem;
+  font-family: "Cherry Bomb One", sans-serif !important;
+  color: #f03167 !important;
+  padding: 2rem;
 }
 
-
-
-nav a:hover{
-    color: #ff779e !important;
+nav a:hover {
+  color: #ff779e !important;
 }
 
-nav a:focus{
-    color: #f5347f !important;
+nav a:focus {
+  color: #f5347f !important;
 }
 
 /* theme */
 /* The switch - the box around the slider */
 .switch {
-    --width-of-switch: 3.5em;
-    --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
-    --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-    --slider-offset: 0.3em;
-    position: absolute;
-    top: 50%;
-    right: 15rem;
-    transform: translateY(-50%);
-    width: var(--width-of-switch);
-    height: var(--height-of-switch);
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: absolute;
+  top: 50%;
+  right: 15rem;
+  transform: translateY(-50%);
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
 }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* sign in button */
+nav button {
+  font-family: "Cherry Bomb One", sans-serif !important;
+  padding: 10px 20px;
+  margin-right: 50px;
+  border: 2px solid #feacc3;
+  border-radius: 20px;
+  color: #f03167;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #feacc3;
+  color: #fff;
+}
+
+nav button:focus {
+  background-color: #f03167;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .text {
+  top: 15rem;
+}
+
+.login-form {
+  position: absolute;
+  width: 30rem;
+  max-width: 90%;
+  gap: 20px;
+  padding: 50px;
+  top: 18rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.644);
+  backdrop-filter: blur(20px); */
+}
+.loginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  background-color: #f03167;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.form {
+  position: relative;
+  width: 450px;
+  width: 100%;
+  gap: 20px;
+  padding: 50px;
+  border-radius: 1rem;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid rgb(183, 183, 183);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: black;
+  outline: none;
+  padding: 15px;
+  transition: all 160ms ease-in;
+  background-color: rgb(255, 255, 255);
+}
+
+.fa-solid {
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  color: rgb(183, 183, 183);
+  cursor: pointer;
+}
+
+.form__label {
+  position: absolute;
+  border-radius: 10px;
+  top: 0.8rem;
+  left: 1rem;
+  padding: 5px;
+  color: rgb(183, 183, 183);
+  background-color: rgb(255, 255, 255);
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -1rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+}
+
+.text p:first-child {
+  font-family: "Cherry Bomb One", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.text p:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.form-checks {
+  display: flex;
+  justify-content: space-between;
+}
+
+form button {
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+  background: linear-gradient(40deg, #ff0080, #ff00d4 70%);
+  color: rgb(29, 29, 29);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+  font-family: "Cherry Bomb One", sans-serif;
+}
+
+.signUpWith p {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: normal;
+  font-weight: light;
+  font-style: italic;
+  line-height: 0.1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.signUpWith p::before,
+.signUpWith p::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #00000059;
+  margin: auto;
+}
+
+.signUpWith p::before {
+  margin-right: 5em;
+}
+
+.signUpWith p::after {
+  margin-left: 5em;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #ff004c;
+  border-radius: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    width: 100%;
   }
-
- 
-
-  /* sign in button */
-  nav button {
-    font-family: 'Cherry Bomb One', sans-serif !important;
-    padding: 10px 20px;
-    margin-right: 50px;
-    border: 2px solid #FEACC3;
-    border-radius: 20px;
-    color: #F03167;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    background-color: #fff;
-    cursor: pointer;
-  }
-
-  nav button:hover{
-    background-color: #FEACC3;
-    color: #fff;
-  }
-
-    nav button:focus{
-        background-color: #F03167;
-        color: #fff;
-        border: none;
-        outline: none;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #f4f4f5;
-        transition: .4s;
-        border-radius: 30px;
-      }
-      
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: var(--size-of-icon,1.4em);
-        width: var(--size-of-icon,1.4em);
-        border-radius: 20px;
-        left: var(--slider-offset,0.3em);
-        top: 50%;
-        transform: translateY(-50%);
-        background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-        ;
-       transition: .4s;
-      }
-
-      input:checked + .slider {
-        background-color: #303136;
-      }
-      
-      input:checked + .slider:before {
-        left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-        background: #303136;
-        /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-        box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-      }
+}
