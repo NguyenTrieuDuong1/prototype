@@ -52,14 +52,13 @@
     <header>
         <nav class="navbar navbar-expand-custom navbar-mainbg">
         <!-- logo -->
-        <a class="navbar-brand navbar-logo" href="landingPage.html"><img src="/public/images/logo.png" alt="logo">COOKCHAT</a>
+        <a class="navbar-brand navbar-logo" href="/views/landingPage.html"><img src="/public/images/logo-cookchat.png" alt="logo" width="40px" height="40px"><span>COOKCHAT</span></a>
                        
         <!-- theme switch -->
         <label class="switch">
             <input type="checkbox">
             <span class="slider"></span>
         </label>
-
         <!-- sign in button -->
         
         <a href="/views/signIn.html"> 
@@ -76,7 +75,7 @@
 
     <div class="signUpForm">
         <!-- sign up form -->
-        <form class="needs-validation" action="#" method="" id="form" novalidate>
+        <form class="validation" action="#" method="" id="form" novalidate>
 
             <p>Sign Up</p>
 
@@ -141,10 +140,10 @@
 
             <!-- submit button -->
 
-            <button type="submit">Create Account</button>
+            <button type="submit" id="submit">Create Account</button>
 
             <!-- register -->
-            <p class="sign-in">Already have an account? <a href="/login">Sign In</a></p>
+            <a href="/login" class="sign-in"><p>Already have an account? </p> <span>Sign In</span></a>
             
 
             <div class="signUpWith">
@@ -153,7 +152,7 @@
                 <!-- sign in with google -->
 
                 <div class="social-media">
-                    <a href="#" class=""><img src="/public/images/logo-google.png" width="24" height="24">Google</a>
+                    <a href="#" class=""><img src="/public/images/logo-google.png" width="30px" height="30px">Sign In With Google</a>
                 </div>
             </div>
         </form>

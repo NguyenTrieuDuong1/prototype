@@ -9,14 +9,13 @@
 body{
     font-family: 'Poppins', sans-serif;
     min-height: 100vh; 
+    width: 100%;
     font-size: 1.2rem;
     background-image: linear-gradient(#FDFDFD,#FFEDFF,#FFDAF2,#F4D6FF,#FED9FF,#F7D7FF,#A7B5FF);
-    width: 100%;
 }
 
 nav {
     padding: 20px 50px;
-    /* margin: 10px; */
     position: fixed; 
     top: 0; 
     width: 100%; 
@@ -28,8 +27,14 @@ nav {
     font-size: 2rem;
     font-family: 'Cherry Bomb One', sans-serif !important;
     color: #F03167 !important;
-	padding: 2rem;
+	padding: 3rem;
 	
+}
+
+.navbar-logo span{
+   padding: 0.3rem;
+   position: relative;
+   top: 0.5rem;
 }
 
 
@@ -161,36 +166,35 @@ nav a:focus{
     gap: 20px;
     padding: 50px;
     top: -10px;
-    border-radius: 1rem;
+    border-radius: 3rem;
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 
 .form{
     position: relative;
-    width: 500px; 
-    gap: 20px;
-    padding: 50px;
-    border-radius: 1rem;
-    
+    width: 550px; 
+    padding: 45px;
+    width: 100%;
 }
 
 
 .form__input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border: 2px solid rgb(183, 183, 183);
-    border-radius: 0.5rem;
-    font-family: inherit;
-    font-size: 1rem;
-    color: black;
-    outline: none;
-    padding: 15px;
-    background: none;
-    transition: all 160ms ease-in;
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid rgb(183, 183, 183);
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: black;
+  outline: none;
+  padding: 15px;
+  transition: all 160ms ease-in;
+  background-color: rgb(255, 255, 255);
 }
 
 .fa-solid{
@@ -223,7 +227,8 @@ nav a:focus{
 .form__input:focus ~ .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label{
     top: -1.2rem;
     font-size: 0.8rem;
-    left: 0.8rem;
+    left: 1rem;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 
@@ -233,20 +238,38 @@ form button{
     width: 100%;
     border: none;
     border-radius: 3rem;
-    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-    color: black;
+    background: linear-gradient(to bottom,#FCC6D6,#FEACC3,#FF779F 70%);
+    color: #00003a;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 200ms ease-in;
     font-family: "Cherry Bomb One", sans-serif;
 }
-/* input:invalid {
+
+
+form button:hover{
+    background: linear-gradient(to bottom,#FF779F,#FEACC3,#FCC6D6 70%);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+form button:focus{
+    background: linear-gradient(to bottom,#FCC6D6,#FEACC3,#FF779F 70%);
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffff;
+
+}
+
+ input:invalid {
     border: 1px solid red;
  }
  
 input:valid {
     border: 1px solid green;
- } */
+ } 
 
 .form-check{
     padding: 15px;
@@ -259,7 +282,10 @@ input:valid {
 
 .form-check div{
     padding: 10px;
-    transform: translate(-45px, -25px);
+    position: absolute;
+    top: 2rem;
+    font-family: "Poppins", sans-serif;
+    transform: translate(-56px, 0px);
 
 }
 
@@ -282,16 +308,31 @@ input:valid {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    font-size: 16px;
+    font-size: 10px;
     letter-spacing: normal;
-    font-weight: bold;
     cursor: pointer;
+     text-decoration: none;
+    color: #5f5f5f;
+    font-size: 12px;
+    position: relative;
+    top: -1rem;
 }
 
-.sign-in a{
-    color: #feacc4;
+.sign-in span{
+    margin-left: 5px;
+    color: #ef3167;
     text-decoration: none;
+}
+
+
+.sign-in p {
+    margin: 0;
+}
+
+.sign-in:hover {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: bold;
 }
 
 .signUpWith p{
@@ -312,38 +353,46 @@ input:valid {
 .signUpWith p::before, .signUpWith p::after{
     content: "";
     flex: 1 1;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #8a8a8a;
     margin: auto;
 }
 
 .signUpWith p::before{
-    margin-right: 0.25em;
+    margin-right: 2rem;
 }
 
 .signUpWith p::after{
-    margin-left: 0.25em;
+    margin-left: 2rem;
 }
 
 .social-media a{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    border: 3px solid #feacc4;
+    border: 3px solid #fdc6d6;
     border-radius: 3rem;
+    text-decoration: none;
+    color: #525252;
+
 }
 
-/* .icon-display {
-    position: absolute;
-    top: 4rem;
-    left: 0.5rem;
-    color: #ff0000;
-    display: inline;
-    cursor: pointer;
+.social-media a:hover{
+    background: linear-gradient(to bottom,#FCC6D6,#FEACC3,#FF779F 70%);
+    font-weight: bold;
+    border: none;
+    color: #000000;
 }
-*/
+
+.social-media a:focus{
+    background: linear-gradient(to bottom,#FCC6D6,#FEACC3,#FF779F 70%);
+    font-weight: bold;
+    border: none;
+    color: #ffff;
+    outline: none;
+}
+
 .icon-error {
     position: relative;
     top: 0.1rem;
@@ -354,14 +403,192 @@ input:valid {
 
 .error {
     color: #ff0000;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: "Poppins", sans-serif;
     color: #ff0000;
+    position: relative;
+    top: 1rem;
+}
+
+.recaptcha div:nth-child(2){
     position: absolute;
-    top: 3.7rem;
+    top: 4rem;
+}
+
+/* responsive */
+@media screen and (max-width: 600px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-logo{
+        padding: 0;
+        margin-left: 10px;
+
+    }
+
+    .navbar-logo span{
+        position: relative;
+        top: 0.5rem;
+        font-size: smaller;
+
+    }
+
+
+    nav button{
+        margin-right: 10px;
+        font-size: smaller;
+
+    }
+
+    
+    .container {
+        width: 100%;
+       
+    }
+
+
+    .signUpForm{
+        width: 100%; 
+        border-radius: 5rem;
+       
+    }
+
+
+    form > p {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Cherry Bomb One', sans-serif;
+        letter-spacing: 2px;
+        color: 	#05081c;
+        padding-top: 1rem;
+    }
+
+    .switch{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+
+    }
+
+    .form__input{
+        width: 100%;
+    }
+
+    .form__label{
+        left: 0.5rem;
+    }
+
+    .form-check{
+        transform: translate(-15px, -20px);
+        font-size: 12px;
+
+    }
+
+    .form-check div{
+        transform: translate(52px, 10px);
+
+}
+
+    .recaptcha{
+        padding-top: 10px;
+        transform: translate(0px, -10px);
+    }
+
+    .recaptcha div:nth-child(2){
+        padding-top: 20px;
+    transform: translate(30px, 10px);
+}
+
+    .sign-in{
+        font-size: 8px;
+        position: relative;
+        top: -0.2rem;
+
+    }
+
+    .signUpWith p{
+        font-size: 8px;
+        position: relative;
+        top: -1.5rem;
+
+    }
+
+    .social-media a{
+        border-radius: 1rem;
+        font-size: 10px;
+        position: relative;
+        padding: 5px;
+        top: -1rem;
+    }
+
+    .social-media{
+        font-size: 10px;
+       
+    }
+
+    
+
+    .icon-error{
+        display: inline;
+    }
+
+    .error{
+        top: 1.2rem;
+        font-size: x-small;
+        left: -1rem;
+        
+    }
 }
 
 
+/* responsive for ipad */
+
+@media screen and (min-width: 600px) and (max-width: 768px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-logo{
+        padding: 0;
+        margin-left: 10px;
+
+    }
+
+    .navbar-logo span{
+        position: relative;
+        top: 0.5rem;
+        font-size: smaller;
+
+    }
+
+     .form-check div{
+
+        transform: translate(-30%, 0px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+}
+
+    .recaptcha div:nth-child(2){
+
+    transform: translate(-10%, 10px);
+}
+
+
+
+
+}
 
 
 
