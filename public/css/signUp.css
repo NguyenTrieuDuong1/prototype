@@ -263,13 +263,13 @@ form button:focus{
 
 }
 
- input:invalid {
+ /* input:invalid {
     border: 1px solid red;
  }
  
 input:valid {
     border: 1px solid green;
- } 
+ }  */
 
 .form-check{
     padding: 15px;
