@@ -28,10 +28,10 @@
     />
 
     <!-- signin javascript -->
-    <script defer src="/public/javascript/signIn.js"></script>
+    <script defer src="/public/javascript/logIn.js"></script>
 
     <!-- signip css -->
-    <link rel="stylesheet" href="/public/css/signIn.css" />
+    <link rel="stylesheet" href="/public/css/logIn.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -55,17 +55,15 @@
 
   <body>
     <!-- navbar -->
-    <header>
-      <nav class="navbar navbar-expand-custom navbar-mainbg">
+     <header>
+        <nav class="navbar navbar-expand-custom navbar-mainbg">
         <!-- logo -->
-        <a class="navbar-brand navbar-logo" href="landingPage.html"
-          ><img src="/public/images/logo-cookchat.png" alt="logo" width="40px" height="40px"/>COOKCHAT</a
-        >
-
+        <a class="navbar-brand navbar-logo" href="/views/landingPage.html"><img src="/public/images/logo-cookchat.png" alt="logo" width="40px" height="40px"><span>COOKCHAT</span></a>
+                       
         <!-- theme switch -->
         <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
+            <input type="checkbox">
+            <span class="slider"></span>
         </label>
 
         <!-- sign in button -->
@@ -142,18 +140,24 @@
             <a href="#" class="forgot-password">Forgot password?</a>
           </div>
 
+          
+
+
           <button type="submit">Log In</button>
 
         </form>
 
         
+            <a href="/login" class="sign-in"><p>Are you a new user? </p> <span>Sign Up</span></a>
+            
+
             <div class="signUpWith">
                 <p>or</p>
 
                 <!-- sign in with google -->
 
                 <div class="social-media">
-                    <a href="#" class=""><img src="/public/images/logo-google.png" width="24" height="24">Sign In With Google</a>
+                    <a href="#" class=""><img src="/public/images/logo-google.png" width="30px" height="30px">Sign In With Google</a>
                 </div>
             </div>
       </div>

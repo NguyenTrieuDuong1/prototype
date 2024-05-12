@@ -12,7 +12,10 @@ body{
     width: 100%;
     font-size: 1.2rem;
     background-image: linear-gradient(#FDFDFD,#FFEDFF,#FFDAF2,#F4D6FF,#FED9FF,#F7D7FF,#A7B5FF);
+    position: relative;
+  
 }
+
 
 nav {
     padding: 20px 50px;
@@ -170,7 +173,13 @@ nav a:focus{
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     margin-top: 10px;
+
+    z-index: 1;
+
 }
+
+
+
 
 
 .form{
@@ -195,7 +204,11 @@ position: absolute;
   padding: 15px;
   transition: all 160ms ease-in;
   background-color: rgb(255, 255, 255);
+
 }
+
+
+
 
 .fa-solid{
     position: absolute;
@@ -572,11 +585,21 @@ input:valid {
 
     }
 
-     .form-check div{
+   .form-check{
+    padding: 10px;
+    transform: translate(0px, -25px);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 
-        transform: translate(-30%, 0px);
-        padding-top: 10px;
-        padding-bottom: 10px;
+}
+
+.form-check div{
+    padding: 10px;
+    position: absolute;
+    top: 2rem;
+    font-family: "Poppins", sans-serif;
+    transform: translate(-56px, 0px);
 
 }
 
