@@ -8,3 +8,11 @@ showPassword.addEventListener("click", function(){
     passwordField.setAttribute("type",type);
 })
 
+
+document.getElementById("submit").addEventListener("click", function (event) {
+    event.preventDefault(); 
+
+    swal("Wellcom Back!", "Enjoy your momment :333", "success");
+    document.getElementById("form").submit(); // Manually submit the form
+  
+});
