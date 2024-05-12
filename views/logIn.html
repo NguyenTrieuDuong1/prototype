@@ -55,15 +55,22 @@
 
   <body>
     <!-- navbar -->
-     <header>
-        <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <header>
+      <nav class="navbar navbar-expand-custom navbar-mainbg">
         <!-- logo -->
-        <a class="navbar-brand navbar-logo" href="/views/landingPage.html"><img src="/public/images/logo-cookchat.png" alt="logo" width="40px" height="40px"><span>COOKCHAT</span></a>
-                       
+        <a class="navbar-brand navbar-logo" href="/views/landingPage.html"
+          ><img
+            src="/public/images/logo-cookchat.png"
+            alt="logo"
+            width="40px"
+            height="40px"
+          /><span>COOKCHAT</span></a
+        >
+
         <!-- theme switch -->
         <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
+          <input type="checkbox" />
+          <span class="slider"></span>
         </label>
 
         <!-- sign in button -->
@@ -122,16 +129,16 @@
             <div class="error" id="password-error"></div>
           </div>
 
-          <!-- redio button remember me -->
-          <div class="form-checks">
-            <div>
+          <!-- radio button remember me -->
+          <div class="radioBtn">
+            <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
-                value=""
-                id="flexCheckDefault"
+                id="rememberMeOption"
+                name="rememberMeOption"
               />
-              <label class="form-check-label" for="flexCheckDefault">
+              <label class="form-check-label" for="rememberMeOption">
                 Remember me
               </label>
             </div>
@@ -140,26 +147,28 @@
             <a href="#" class="forgot-password">Forgot password?</a>
           </div>
 
-          
-
-
           <button type="submit">Log In</button>
-
         </form>
 
-        
-            <a href="/login" class="sign-in"><p>Are you a new user? </p> <span>Sign Up</span></a>
-            
+        <a href="/views/signUp.html" class="sign-in"
+          ><p>Are you a new user?</p>
+          <span>Sign Up</span></a>
 
-            <div class="signUpWith">
-                <p>or</p>
+        <div class="signUpWith">
+          <p>or</p>
 
-                <!-- sign in with google -->
+          <!-- sign in with google -->
 
-                <div class="social-media">
-                    <a href="#" class=""><img src="/public/images/logo-google.png" width="30px" height="30px">Sign In With Google</a>
-                </div>
-            </div>
+          <div class="social-media">
+            <a href="#" class=""
+              ><img
+                src="/public/images/logo-google.png"
+                width="30px"
+                height="30px"
+              />Sign In With Google</a
+            >
+          </div>
+        </div>
       </div>
     </main>
 

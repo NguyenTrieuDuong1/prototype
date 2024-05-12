@@ -240,7 +240,7 @@ input:checked + .slider:before {
   opacity: 0.7;
 }
 
-.form-checks {
+.radioBtn{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -423,7 +423,7 @@ form button {
   
 
 
-.form-checks {
+.radioBtn {
  font-size: 0.8rem;
 }
 
