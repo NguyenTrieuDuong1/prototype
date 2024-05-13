@@ -22,8 +22,7 @@ hr {
 
 .post {
     top: 100px;
-    display: inline-block;
-    width: 43.75rem; /* 500px / 16 */
+    width: 40.625rem; /* 500px / 16 */
     background-color: white;
     align-items: center;
     border-radius: 0.9375rem; /* 15px / 16 */
@@ -83,6 +82,10 @@ hr {
 
 .bodyContent img {
 	box-shadow: none;
+}
+
+#filledHeart {
+	color: red;
 }
 
 
