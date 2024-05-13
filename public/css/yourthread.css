@@ -1,0 +1,137 @@
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+i {
+	margin-right: 10px;
+}
+
+main {
+    display: flex;
+}
+
+hr {
+	border: none; 
+	border-top: 0.1rem solid black;
+}
+
+.post {
+    top: 100px;
+    display: inline-block;
+    width: 43.75rem; /* 500px / 16 */
+    background-color: white;
+    align-items: center;
+    border-radius: 0.9375rem; /* 15px / 16 */
+    box-shadow: 0 0.25rem 0.375rem rgba(22, 22, 26, 0.18); /* 4px / 16 and 6px / 16 */
+    padding: 2rem;
+	padding-top: 1rem;
+}
+
+.post h3 {
+    font-weight: bold;
+}
+
+.post h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline;
+}
+
+.info{
+    display: inline-flex;
+}
+
+.info .threadName {
+    position: absolute;
+    left: 6.25rem;
+}
+
+.info .userName{
+    position: absolute;
+    left: 6.3rem;
+    top: 4.5rem;
+}
+.info .time::before {
+    content: "• ";
+}
+
+.info .time {
+    position: absolute;
+    left: 13.5rem;
+    top: 4.75rem;
+    font-size: 0.75rem;
+    color: #C6C6C6;
+}
+
+.actionButtons{
+    margin-top: 15px;
+}
+
+.actionButtons button{
+	border: none;
+	background-color: transparent;
+}
+
+.actionButtons button:hover{
+	cursor: pointer;
+}
+
+.bodyContent img {
+	box-shadow: none;
+}
+
+
+
+/* Dropdown container */
+.dropdown {
+    display: inline-block;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	transform: scale(0.75);
+  }
+  
+  /* Dropdown button */
+  .dropbtn {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    font-size: 24px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer */
+	color: #D9D9D9;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Box shadow */
+    z-index: 1; /* Ensure it appears on top of other elements */
+	opacity: 0; /* Start from transparent */
+	transition: opacity 0.5s ease; /* Transition effect */
+  }
+  
+  /* Show the dropdown content when the dropdown button is clicked */
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+	opacity: 1; /* Full opacity */
+  }
+  
+  /* Dropdown options */
+  .dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display */
+  }
+  
+  /* Change background color of dropdown options on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd; /* Light gray background */
+  }
+  
