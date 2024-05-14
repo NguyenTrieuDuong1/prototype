@@ -1,68 +1,68 @@
 // ---------Responsive-navbar-active-animation-----------
-feather.replace();
+// feather.replace();
 
-function test() {
-  var tabsNewAnim = document.getElementById("navbarSupportedContent");
-  var activeItemNewAnim = tabsNewAnim.querySelector(".active");
-  var activeWidthNewAnimHeight = activeItemNewAnim.offsetHeight;
-  var activeWidthNewAnimWidth = activeItemNewAnim.offsetWidth;
-  var itemPosNewAnimTop = activeItemNewAnim.offsetTop;
-  var itemPosNewAnimLeft = activeItemNewAnim.offsetLeft;
+// function test() {
+//   var tabsNewAnim = document.getElementById("navbarSupportedContent");
+//   var activeItemNewAnim = tabsNewAnim.querySelector(".active");
+//   var activeWidthNewAnimHeight = activeItemNewAnim.offsetHeight;
+//   var activeWidthNewAnimWidth = activeItemNewAnim.offsetWidth;
+//   var itemPosNewAnimTop = activeItemNewAnim.offsetTop;
+//   var itemPosNewAnimLeft = activeItemNewAnim.offsetLeft;
 
-  document.querySelector(".hori-selector").style.cssText =
-    "top:" +
-    itemPosNewAnimTop +
-    "px; left:" +
-    itemPosNewAnimLeft +
-    "px; height:" +
-    activeWidthNewAnimHeight +
-    "px; width:" +
-    activeWidthNewAnimWidth +
-    "px; bottom: 0px !important;";
+//   document.querySelector(".hori-selector").style.cssText =
+//     "top:" +
+//     itemPosNewAnimTop +
+//     "px; left:" +
+//     itemPosNewAnimLeft +
+//     "px; height:" +
+//     activeWidthNewAnimHeight +
+//     "px; width:" +
+//     activeWidthNewAnimWidth +
+//     "px; bottom: 0px !important;";
 
-  tabsNewAnim.querySelectorAll("li").forEach(function (li) {
-    li.addEventListener("click", function (e) {
-      tabsNewAnim.querySelectorAll("ul li").forEach(function (uli) {
-        uli.classList.remove("active");
-      });
-      this.classList.add("active");
-      var activeWidthNewAnimHeight = this.offsetHeight;
-      var activeWidthNewAnimWidth = this.offsetWidth;
-      var itemPosNewAnimTop = this.offsetTop;
-      var itemPosNewAnimLeft = this.offsetLeft;
-      document.querySelector(".hori-selector").style.cssText =
-        "top:" +
-        itemPosNewAnimTop +
-        "px; left:" +
-        itemPosNewAnimLeft +
-        "px; height:" +
-        activeWidthNewAnimHeight +
-        "px; width:" +
-        activeWidthNewAnimWidth +
-        "px";
-    });
-  });
-}
+//   tabsNewAnim.querySelectorAll("li").forEach(function (li) {
+//     li.addEventListener("click", function (e) {
+//       tabsNewAnim.querySelectorAll("ul li").forEach(function (uli) {
+//         uli.classList.remove("active");
+//       });
+//       this.classList.add("active");
+//       var activeWidthNewAnimHeight = this.offsetHeight;
+//       var activeWidthNewAnimWidth = this.offsetWidth;
+//       var itemPosNewAnimTop = this.offsetTop;
+//       var itemPosNewAnimLeft = this.offsetLeft;
+//       document.querySelector(".hori-selector").style.cssText =
+//         "top:" +
+//         itemPosNewAnimTop +
+//         "px; left:" +
+//         itemPosNewAnimLeft +
+//         "px; height:" +
+//         activeWidthNewAnimHeight +
+//         "px; width:" +
+//         activeWidthNewAnimWidth +
+//         "px";
+//     });
+//   });
+// }
 
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(test, 0);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(test, 0);
+// });
 
-window.addEventListener("resize", function () {
-  setTimeout(test, 500);
-});
+// window.addEventListener("resize", function () {
+//   setTimeout(test, 500);
+// });
 
-document
-  .querySelector(".navbar-toggler")
-  .addEventListener("click", function () {
-    var navbarCollapse = document.querySelector(".navbar-collapse");
-    if (navbarCollapse.style.display === "none") {
-      navbarCollapse.style.display = "";
-    } else {
-      navbarCollapse.style.display = "none";
-    }
-    setTimeout(test, 0);
-  });
+// document
+//   .querySelector(".navbar-toggler")
+//   .addEventListener("click", function () {
+//     var navbarCollapse = document.querySelector(".navbar-collapse");
+//     if (navbarCollapse.style.display === "none") {
+//       navbarCollapse.style.display = "";
+//     } else {
+//       navbarCollapse.style.display = "none";
+//     }
+//     setTimeout(test, 0);
+//   });
 
 // --------------add active class-on another-page move----------
 
@@ -103,3 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+const button = document.querySelector(".button");
+
+button.addEventListener("mousedown", () => button.classList.add("clicked"));
