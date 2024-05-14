@@ -13,13 +13,14 @@ searchBtn.addEventListener("click", () => {
   sidebar.classList.remove("close");
 });
 
+
+
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle('dark');
     modeText.textContent = body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
 });
 
 const sections = document.querySelectorAll("section[id]");
-
 function scrollActive() {
   const scrollY = window.pageYOffset;
 

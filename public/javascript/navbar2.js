@@ -1,29 +1,21 @@
-feather.replace();
+const body = document.querySelector("body");
+const sidebar = document.querySelector(".sidebar");
+const toggle = document.querySelector(".toggle");
+const searchBtn = document.querySelector(".search-box");
+const modeSwitch = document.querySelector(".toggle-switch");
+const modeText = document.querySelector(".mode-text");
 
-// Close the dropdown if the user clicks outside of it
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.querySelectorAll(".sidebar .nav-link").forEach(function (element) {
-//     element.addEventListener("click", function (e) {
-//       let nextEl = element.nextElementSibling;
-//       let parentEl = element.parentElement;
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
 
-//       if (nextEl) {
-//         e.preventDefault();
-//         let mycollapse = new bootstrap.Collapse(nextEl);
+searchBtn.addEventListener("click", () => {
+  sidebar.classList.remove("close");
+});
 
-//         if (nextEl.classList.contains("show")) {
-//           mycollapse.hide();
-//         } else {
-//           mycollapse.show();
-//           // find other submenus with class=show
-//           var opened_submenu =
-//             parentEl.parentElement.querySelector(".submenu.show");
-//           // if it exists, then close all of them
-//           if (opened_submenu) {
-//             new bootstrap.Collapse(opened_submenu);
-//           }
-//         }
-//       }
-//     }); // addEventListener
-//   }); // forEach
-// }); 
+modeSwitch.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  modeText.textContent = body.classList.contains("dark")
+    ? "Light Mode"
+    : "Dark Mode";
+});

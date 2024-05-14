@@ -34,134 +34,116 @@
       href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"
     />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
+   
     <link rel="stylesheet" href="/public/css/navbar2.css" />
 
     <script defer src="/public/javascript/navbar2.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+
+     <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <title>COOKCHAT</title>
   </head>
 
   <body>
     <header>
-      <!-- topbar -->
+       <!-- sidebar -->
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="/public/images/logo-cookchat.png" alt="logo" />
+          </span>
 
-      
+          <div class="text header-text">
+            
+            <span class="name">COOKCHAT</span>
+          </div>
+        </div>
 
-      <!-- sidebar -->
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
 
-      <div class="sidebar">
-        <div class="logo-wrapper"></div>
-        <ul class="sidebar-menu">
-          <a class="navbar-brand navbar-logo" href="#"
-            ><img
-              src="/public/images/logo-cookchat.png"
-              alt="logo"
-              width="40px"
-              height="40px"
-            /><span>COOKCHAT</span></a
-          >
-
-          <!-- profile -->
-          <li>
-            <a href="#" class="nav-link">
-              <img
-                class="icon rounded-circle"
-                src="/public/images/profile.png"
-                alt="Profile icon"
-              />
-              Kanna Kamui
-            </a>
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
           </li>
-          <!-- Threads and Posts -->
-          <li>
-            <a href="#" class="nav-link active">
-              <span class="icon">
-                <img src="/public/images/web-content 1.png" />
-              </span>
-              Your Threads
-            </a>
-          </li>
-          <!-- recipes collection -->
-          <li>
-            <a href="#" class="nav-link">
-              <span class="icon">
-                <svg
-                  fill="#000000"
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 219.792 219.792"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <path
-                      d="M159.4,25.975c-0.916,0-1.836,0.024-2.759,0.07C146.664,9.856,129.195,0,109.896,0c-19.3,0-36.769,9.856-46.744,26.045
-		c-0.923-0.047-1.844-0.07-2.76-0.07c-30.306,0-54.961,24.656-54.961,54.962c0,25.355,17.397,47.182,41.432,53.264v78.092
-		c0,4.143,3.357,7.5,7.5,7.5h111.066c4.143,0,7.5-3.357,7.5-7.5v-78.088c24.031-6.084,41.432-27.917,41.432-53.268
-		C214.361,50.631,189.706,25.975,159.4,25.975z M157.929,204.792H61.863v-14.136h20.639h27.395h27.396h20.638V204.792z
-		 M164.485,120.563c-3.747,0.476-6.556,3.663-6.556,7.44v50.152h-14.388v-46.779c0-3.452-2.798-6.25-6.25-6.25
-		c-3.452,0-6.25,2.798-6.25,6.25v46.779h-14.896v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H88.752
-		v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H61.863V128.73c0.008-0.085,0.015-0.17,0.021-0.255
-		c0.248-3.952-2.618-7.416-6.547-7.912c-19.899-2.51-34.905-19.546-34.905-39.626c0-22.035,17.927-39.962,39.961-39.962
-		c1.929,0,3.893,0.144,5.842,0.431c3.221,0.472,6.374-1.184,7.813-4.102C80.837,23.546,94.575,15,109.896,15
-		c15.32,0,29.058,8.547,35.852,22.305c1.439,2.917,4.587,4.571,7.814,4.101c1.944-0.286,3.908-0.431,5.838-0.431
-		c22.034,0,39.961,17.927,39.961,39.962C199.361,101.005,184.368,118.04,164.485,120.563z"
-                    />
-                  </g>
-                </svg>
-              </span>
-              Recipes
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">
-              <span class="icon">
-                <i data-feather="bookmark"></i>
-              </span>
-              Saved
+
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="icon"
+                  ><img src="/public/images/profile.png" width="30px"
+                /></i>
+                <span class="text nav-text">Kanna Kamui</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Log out</span>
             </a>
           </li>
 
-          <!-- Create new thread -->
-          <li>
-            <a href="#" class="nav-link">
-              <span class="icon"><i data-feather="plus"></i></span>
-              Create New Thread
-            </a>
-          </li>
-        </ul>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
 
-        <ul class="nav flex-column" id="nav_accordion">
-          <li class="nav-item has-submenu">
-            <a class="nav-link" href="#"> Communities </a>
-            <ul class="submenu collapse">
-              <li><a class="nav-link" href="#">Submenu item 1 </a></li>
-              <li><a class="nav-link" href="#">Submenu item 2 </a></li>
-              <li><a class="nav-link" href="#">Submenu item 3 </a></li>
-            </ul>
-          </li>
-        </ul>
+            <span class="mode-text text">Dark Mode</span>
 
-        <!-- more -->
-        <ul class="sidebar-menu bottom">
-          <li>
-            <a href="#" class="nav-link">
-              <span class="icon"><i data-feather="menu"></i></span>
-              More
-            </a>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
           </li>
-        </ul>
+        </div>
       </div>
+    </nav>
+
     </header>
 
     <main></main>
@@ -169,11 +151,5 @@
     <!-- Include Feather Icons JS and initialization script -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
