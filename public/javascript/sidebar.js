@@ -49,3 +49,27 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
+
+// topbar
+let subMenus = document.getElementById('subMenus');
+
+function toggleMenus() {
+  subMenus.classList.toggle('open-menus');
+}
+
+
+// notification
+document.addEventListener("DOMContentLoaded", function () {
+  var items = document.querySelectorAll(".notification-drop .item");
+
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var ul = this.querySelector("ul");
+      if (ul.style.display === "block") {
+        ul.style.display = "none";
+      } else {
+        ul.style.display = "block";
+      }
+    });
+  });
+});

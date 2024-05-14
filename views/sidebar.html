@@ -16,6 +16,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- sidebar -->
     <nav class="sidebar close">
       <header>
         <div class="image-text">
@@ -25,7 +26,6 @@
 
           <div class="text header-text">
             <span class="name">COOKCHAT</span>
-            
           </div>
         </div>
 
@@ -74,15 +74,14 @@
               </a>
             </li>
 
-
             <li class="nav-link">
               <a href="#" class="dropdown-toggle">
-                <i class="icon"><img src="/public/images/profile.png" width="30px"></i>
+                <i class="icon"
+                  ><img src="/public/images/profile.png" width="30px"
+                /></i>
                 <span class="text nav-text">Kanna Kamui</span>
               </a>
             </li>
-
-
           </ul>
         </div>
         <div class="bottom-content">
@@ -109,95 +108,133 @@
       </div>
     </nav>
 
-
     <!-- nav bottom -->
 
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">COOKCHAT</a>
+      <nav class="nav container">
+        <a href="#" class="nav__logo">COOKCHAT</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class='bx bx-home-alt nav__icon'></i>
-                            <span class="nav__name">Home</span>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
 
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#search" class="nav__link">
+                <i class="bx bx-search nav__icon"></i>
+                <span class="nav__name">Search</span>
+              </a>
+            </li>
 
-                      <li class="nav__item">
-                        <a href="#search" class="nav__link">
-                            <i class='bx bx-search nav__icon' ></i>
-                            <span class="nav__name">Search</span>
+            <li class="nav__item">
+              <a href="#create" class="nav__link">
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
+              </a>
+            </li>
 
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#recipes" class="nav__link">
+                <i class="bx bx-bowl-hot nav__icon"></i>
+                <span class="nav__name">Recipes</span>
+              </a>
+            </li>
 
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <img
+                  src="/public/images/profile.png"
+                  width="25px"
+                  class="nav__icon"
+                />
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-                      <li class="nav__item">
-                        <a href="#create" class="nav__link">
-                            <i class='bx bx-plus-circle nav__icon' ></i>
-                            <span class="nav__name">Create</span>
-
-                        </a>
-                    </li>
-
-
-                      <li class="nav__item">
-                        <a href="#recipes" class="nav__link">
-                            <i class='bx bx-bowl-hot nav__icon' ></i>
-                            <span class="nav__name">Recipes</span>
-
-                        </a>
-                    </li>
-
-
-                      <li class="nav__item">
-                        <a href="#profile" class="nav__link">
-                            <img src="/public/images/profile.png" width="25px" class="nav__icon">
-                            <span class="nav__name">Profile</span>
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-            </div>
-
-            <img src="/public/images/user-img.jpg" class="nav__img" width="40px">
-
-        </nav>
-
+        <!-- <img src="/public/images/user-img.jpg" class="nav__img" width="40px"> -->
+      </nav>
     </header>
 
+    <div class="hero">
+      <nav>
+        <ul class="notification-drop">
+    <li class="item">
+      <i class="bx bxs-bell notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
+      
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+      </ul>
+    </li>
+  </ul>
+
+        <img
+          src="/public/images/user-img.jpg"
+          width="40px"
+          alt="profile"
+          class="user-pic"
+          onclick="toggleMenus()"
+        />
+
+        <div class="sub-menus-wrap" id="subMenus">
+          <div class="sub-menus">
+            <div class="user-info">
+              <img src="/public/images/profile.png" />
+              <h3>Kanna Kamui</h3>
+            </div>
+            <hr />
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-cog"></i>
+              <p>Settings</p>
+            </a>
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-help-circle"></i>
+              <p>Help & Support</p>
+            </a>
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-log-out"></i>
+              <p>Log Out</p>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
     <main>
-        <section class="home">
+      <section class="home">
         <div class="text"></div>
-        </section>
+      </section>
 
-        <section class="container section section__height" id="home">
-            <h2 class="section__title">Home</h2>
-        </section>
+      <section class="container section section__height" id="home">
+        <h2 class="section__title">Home</h2>
+      </section>
 
-        <section class="container section section__height" id="search">
-            <h2 class="section__title">Search</h2>
-        </section>
+      <section class="container section section__height" id="search">
+        <h2 class="section__title">Search</h2>
+      </section>
 
-        <section class="container section section__height" id="create">
-            <h2 class="section__title">Create</h2>
-        </section>
+      <section class="container section section__height" id="create">
+        <h2 class="section__title">Create</h2>
+      </section>
 
-        <section class="container section section__height" id="recipes">
-            <h2 class="section__title">Recipes</h2>
-        </section>
+      <section class="container section section__height" id="recipes">
+        <h2 class="section__title">Recipes</h2>
+      </section>
 
-        <section class="container section section__height" id="profile">
-            <h2 class="section__title">Kanna</h2>
-        </section>
+      <section class="container section section__height" id="profile">
+        <h2 class="section__title">Kanna</h2>
+      </section>
     </main>
-    
 
     <script src="/public/javascript/sidebar.js"></script>
   </body>
