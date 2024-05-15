@@ -7,7 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/public/css/sidebar.css" />
 
-    <link rel="stylesheet" href="/public/css/settings.css" />
+    <link rel="stylesheet" href="/public/css/adminLock.css" />
 
     <!-- Boxicons CSS -->
     <link
@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
 
-    <title>Settings</title>
+    <title>Document</title>
   </head>
   <body>
     <!-- sidebar -->
@@ -51,40 +51,31 @@
             </li>
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-edit-alt icon'></i>
-                <span class="text nav-text">Edit Profile</span>
+                <i class='bx bx-user-check icon'></i>
+                <span class="text nav-text">Lock Users</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-               <i class='bx bx-edit icon'></i>
-                <span class="text nav-text">Change Password</span>
+                <i class='bx bx-box icon'></i>
+                <span class="text nav-text">Archive Communities</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-                <i class='bx bxs-user-account icon' ></i>
-                <span class="text nav-text">Deactivate account</span>
+                <i class='bx bx-at icon'></i>
+                <span class="text nav-text">Archive Posts</span>
               </a>
             </li>
 
-             <li class="nav-link">
-              <a href="#">
-                <i class='bx bx-shield-alt-2 icon'></i>
-                <span class="text nav-text">Security</span>
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
               </a>
             </li>
-
-             <li class="nav-link">
-              <a href="#">
-                <i class='bx bx-help-circle icon'></i>
-                <span class="text nav-text">Support</span>
-              </a>
-            </li>
-
-          
 
             <li class="nav-link">
               <a href="#" class="dropdown-toggle">
@@ -174,7 +165,6 @@
     </header>
 
     <div class="hero">
-        
       <nav>
         <ul class="notification-drop">
     <li class="item">
@@ -228,72 +218,119 @@
       </nav>
     </div>
 
-
     <section class="home">
-        <div class="text">
-            Settings 
+        <div class="text"> Lock / Unlock User</div>
+
+        <div class="search-box2">
+            <button class="btn-search2"><i class='bx bx-search' ></i></button>
+            <input type="text" class="input-search2" placeholder="Type to Search...">
         </div>
-        
-        <div class="edit-profile">
-           <div class="text">
-                <h5>Edit Profile</h5>
-           </div>
 
-           <div class="profile">
-              <div class="profile-img">
-                  <img src="/public/images/profile.png" alt="profile" class="profile-pic">
-              </div>
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected">Lock</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu-li">
+            <li class="active">Lock</li>
+            <li>Unlock</li>
+          </ul>
 
-              <div class="profile-name">
-                <p>Kanna Kamui</p>
+        </div>
 
-                <div class="btn">
-                    <button class="btn-change">Change Profile Picture</button>
-                 </div>   
-              </div>
+        <div class="last">
+
+
+        <div class="manage-users">
+          <div class="user">
+            <input type="checkbox" class="checkbox">
+            <img src="/public/images/profile.png" alt="user" class="user-img">
+            <div class="user-infos">
+              <h3 class="user-name">Kanna Kamui <small>(member)</small></h3>
+              <p>Unlock</p>
+              
+            </div>
+            <span>Joined: 17/12/2024</span>
+            <div class="btn-group">
+              <button class="btn-lock">Lock</button>
+              <button class="btn-delete">Delete</button>
+              <button class="btn-view">View</button>
             </div>
 
-            <div class="form-profile">
-                <form action="">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Kanna Kamui">
-                     </div>
-                     <div class="form-group">
-                        <label for="nickName">Nickname:</label>
-                        <input type="text" name="nickName" id="nickName" placeholder="Walnut">
-                     </div>
-                     
-                      <div class="form-group">
-                        <label for="bio">Bio:</label>
-                        <textarea name="bio" id="bio" placeholder="I am a walnut"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="Gender">Gender:</label>
-                        <select name="gender" id="genders">
-                        <option value="female">She/her</option>
-                        <option value="male">He/Him</option>
-                        <option value="they">They/The,</option>
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="birthdate">Birthdate:</label>
-                        <input type="date" name="birthdate" id="birthdate">
-                      </div>
-
-                      <div class="btn">
-                        <button type="submit" class="btn btn-submits">Save Change</button>
-                      </div>
-                  </form>  
-
+          </div>
         </div>
+
+        <div class="manage-users">
+          <div class="user">
+            <input type="checkbox" class="checkbox">
+            <img src="/public/images/profile.png" alt="user" class="user-img">
+            <div class="user-infos">
+              <h3 class="user-name">Kanna Kamui <small>(member)</small></h3>
+              <p>Unlock</p>
+              
+            </div>
+            <span>Joined: 17/12/2024</span>
+            <div class="btn-group">
+              <button class="btn-lock">Lock</button>
+              <button class="btn-delete">Delete</button>
+              <button class="btn-view">View</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="manage-users">
+          <div class="user">
+            <input type="checkbox" class="checkbox">
+            <img src="/public/images/profile.png" alt="user" class="user-img">
+            <div class="user-infos">
+              <h3 class="user-name">Kanna Kamui <small>(member)</small></h3>
+              <p>Unlock</p>
+              
+            </div>
+            <span>Joined: 17/12/2024</span>
+            <div class="btn-group">
+              <button class="btn-lock">Lock</button>
+              <button class="btn-delete">Delete</button>
+              <button class="btn-view">View</button>
+            </div>
+
+          </div>
+        </div>
+
+       </div>
+   
+
 
       </section>
 
+    <!-- <main>
+      <section class="home">
+        <div class="text"></div>
+      </section>
 
-    
+      <section class="container section section__height" id="home">
+        <h2 class="section__title"></h2>
+      </section>
+
+      <section class="container section section__height" id="search">
+        <h2 class="section__title"></h2>
+      </section>
+
+      <section class="container section section__height" id="create">
+        <h2 class="section__title"></h2>
+      </section>
+
+      <section class="container section section__height" id="recipes">
+        <h2 class="section__title"></h2>
+      </section>
+
+      <section class="container section section__height" id="profile">
+        <h2 class="section__title"></h2>
+      </section>
+    </main> -->
 
     <script src="/public/javascript/sidebar.js"></script>
+    <script src="/public/javascript/adminLock.js"></script>
   </body>
 </html>
