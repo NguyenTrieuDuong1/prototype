@@ -196,7 +196,16 @@ body.dark{
   margin-bottom: 10px;
 }
 
-.checkbox {
+.user .checkboxes{
+  width: 20px;
+  height: 20px;
+}
+
+.user .all{
+  padding-left: 5%;
+}
+
+.user .checkbox {
   margin-right: 50px;
   width: 40px;
   height: 40px;
