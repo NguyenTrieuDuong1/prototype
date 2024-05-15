@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #ddd;
+    --text-color: #ddd;
+
+}
+
+
+
+.edit-profile{
+   
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.edit-profile .text{
+    display: relative;
+    font-size: 25px;
+    font-weight: 300;
+    top: 0;
+    
+} 
+
+
+
+
+
+
+
+.form-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+
+}
+
+
+
+  label {
+            display: inline-block;
+            width: 120px;
+            padding: 10px;
+         }
+
+         .form-group input {
+            width: 100%;
+            width: 300px;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 20px;
+         }
+
+         .btn-submits{
+            margin-top: 15px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            background-color: #FC72A6;
+            border-radius: 3rem;
+            font-family: "Cherry Bomb One", cursive;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: white;
+         }
+
+         label + input {
+            background-color: rgb(248, 219, 244);
+            
+         }
+  @media screen and (max-width: 600px){
+    
+
+    .sidebar.close ~ .home {
+    left: 0;
+    width: 100%;
+}
+
+    
+.form-profile{
+
+
+  
+    width: 100%;
+   
+
+    
+}
+
+
+    
+
+    .edit-profile .text {
+        font-size: 20px;
+    }
+
+    
+            .form-group input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            
+         }
+
+         
+  label {
+            display: inline;
+            width: 120px;
+            padding: 10px;
+         }
+
+  }
+

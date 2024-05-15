@@ -332,7 +332,11 @@ body.dark .switch::before{
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
-    padding: 8px 40px;
+    position: absolute;
+    padding: 8px 8px;
+    left: 10%;
+    top: 7%;
+   
 }
 
 .sidebar.close ~ .home{
