@@ -21,6 +21,7 @@ app.use(require("express-session")({
  
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static(__dirname + '/public'));
  
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -42,7 +43,7 @@ app.get("/secret", isLoggedIn, function (req, res) {
  
 // Showing register form
 app.get("/register", function (req, res) {
-    res.sendFile(path.join(__dirname, '/views/signUp.html'));
+    res.sendFile('signUp.html', { root: 'views' });
 });
  
 // Handling user signup
