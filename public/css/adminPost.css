@@ -80,3 +80,189 @@ body.dark{
   right: 3rem;
   bottom: 0;
 }
+
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.users{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.user-img {
+  margin-right: 10px;
+}
+
+.user-infos {
+  flex-grow: 1;
+}
+ 
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.user-infos {
+  flex-grow: 1;
+}
+
+.user-infos p {
+  margin-top: 5px;
+}
+
+.food-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+
+
+
+.btn-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.btn-lock,
+.btn-delete,
+.btn-view {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.manage-posts {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 8rem;
+    top: 20rem;
+    padding: 10px;
+    margin: 20px;
+    width: calc(100% - 250px);
+    background-color: #fff;
+    border-radius: 20px;
+    
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .last{
+    height : calc(100% + 20rem) !important;
+   
+  }
+
+  
+    .sidebar.close ~ .home {
+        left: 0;
+        width: 100%;
+       
+        
+    }
+
+    .sidebar.close ~ .home .search-box2{
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      top: 7rem;
+      left: 2rem;
+      
+    }
+
+
+
+    .manage-posts .user{
+      margin-bottom: 2rem;
+      bottom: 5rem;
+    }
+    
+
+    .search-box2{
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      top: 7rem;
+      left: 2rem;
+      
+    }
+
+
+
+  .manage-posts {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    
+   
+   
+  }
+
+
+  .user-name  {
+    font-size: 13px;
+  }
+
+  .user-name small{
+    font-size: 10px;
+  }
+
+  .user span{
+    font-size: 10px;
+  }
+
+  .user-infos p{
+    font-size: 12px;
+  }
+
+
+  
+
+.filters {
+ 
+  top: 10rem;
+  left: 0;
+}
+
+.filters span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filter-options {
+  display: flex;
+  margin-right: 5px;
+}
+
+.filter-options select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+  
+  
+}
+
+
