@@ -28,10 +28,10 @@
     />
 
     <!-- signin javascript -->
-    <script defer src="/public/javascript/logIn.js"></script>
+    <script defer src="/javascript/logIn.js"></script>
 
     <!-- signip css -->
-    <link rel="stylesheet" href="/public/css/logIn.css" />
+    <link rel="stylesheet" href="/css/logIn.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -41,13 +41,13 @@
       crossorigin="anonymous"
     />
 
-    <script defer src="/public/javascript/navbar.js"></script>
+    <script defer src="/javascript/navbar.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- icon -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <script defer src="/public/javascript/navbar.js"></script>
+    <script defer src="/javascript/navbar.js"></script>
 
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -60,7 +60,7 @@
         <!-- logo -->
         <a class="navbar-brand navbar-logo" href="/views/landingPage.html"
           ><img
-            src="/public/images/logo-cookchat.png"
+            src="/images/logo-cookchat.png"
             alt="logo"
             width="40px"
             height="40px"
@@ -82,7 +82,7 @@
     <main class="container wrapper">
       <div class="d-flex position-relative justify-content-center">
         <img
-          src="/public/images/user-img.jpg"
+          src="/images/user-img.jpg"
           width="150px"
           height="150px"
           class="rounded-circle"
@@ -96,10 +96,11 @@
       </div>
 
       <div class="login-form">
-        <form>
+        <form method="POST" action="/login">
           <div class="form">
             <input
               type="email"
+              name="email"
               id="email"
               class="form__input"
               autocomplete="off"
@@ -115,6 +116,7 @@
           <div class="form">
             <input
               type="password"
+              name="password"
               id="password"
               class="form__input"
               autocomplete="off"

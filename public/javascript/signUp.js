@@ -6,6 +6,8 @@ const express = require("express"),
     passportLocalMongoose = require("passport-local-mongoose")
 const User = require("./model/User");
 let app = express();
+
+mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree");
  
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -189,7 +191,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
             password: req.body.password
           });
           console.log("logged")
-          res.send("User created successfully")
+          res.render("landingPage");
         });
         document.getElementById("form").submit(); // Manually submit the form
 
