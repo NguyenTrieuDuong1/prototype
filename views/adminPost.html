@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="/public/css/adminThread.css" />
 
+    <link rel="stylesheet" href="/public/css/adminPost.css" />
+
     <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -29,7 +31,6 @@
           </span>
 
           <div class="text header-text">
-            
             <span class="name">COOKCHAT</span>
           </div>
         </div>
@@ -53,21 +54,21 @@
             </li>
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-user-check icon'></i>
+                <i class="bx bx-user-check icon"></i>
                 <span class="text nav-text">Lock Users</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-box icon'></i>
+                <i class="bx bx-box icon"></i>
                 <span class="text nav-text">Archive Communities</span>
               </a>
             </li>
 
             <li class="nav-link">
               <a href="#">
-                <i class='bx bx-at icon'></i>
+                <i class="bx bx-at icon"></i>
                 <span class="text nav-text">Archive Posts</span>
               </a>
             </li>
@@ -169,16 +170,17 @@
     <div class="hero">
       <nav>
         <ul class="notification-drop">
-    <li class="item">
-      <i class="bx bxs-bell notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
-      
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
-    </li>
-  </ul>
+          <li class="item">
+            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
+            <span class="btn__badge pulse-button">4</span>
+
+            <ul>
+              <li>First Item</li>
+              <li>Second Item</li>
+              <li>Third Item</li>
+            </ul>
+          </li>
+        </ul>
 
         <img
           src="/public/images/user-img.jpg"
@@ -202,7 +204,7 @@
             </a>
 
             <a href="#" class="sub-menus-link">
-              <i class='bx bxs-dashboard' ></i>
+              <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
             </a>
 
@@ -221,14 +223,18 @@
     </div>
 
     <section class="home">
-        <div class="text"> Archive Communities</div>
+      <div class="text">Archive Posts</div>
 
-        <div class="search-box2">
-            <button class="btn-search2"><i class='bx bx-search' ></i></button>
-            <input type="text" class="input-search2" placeholder="Type to Search...">
-        </div>
+      <div class="search-box2">
+        <button class="btn-search2"><i class="bx bx-search"></i></button>
+        <input
+          type="text"
+          class="input-search2"
+          placeholder="Type to Search..."
+        />
+      </div>
 
-        <!-- <div class="dropdown">
+      <!-- <div class="dropdown">
           <div class="select">
             <span class="selected">Sort</span>
             <div class="caret"></div>
@@ -240,58 +246,64 @@
 
         </div> -->
 
-        <div class="filters">
-      <span>Filters:</span>
-      <div class="filter-options">
-        <select name="category">
-          <option value="all">All</option>
-          <option value="cooking">Cooking</option>
-          <option value="uncategorized">Uncategorized</option>
-        </select>
-        <select name="date">
-          <option value="all">All Dates</option>
-          <option value="april-2024">April 2024</option>
-        </select>
+      <div class="filters">
+        <span>Filters:</span>
+        <div class="filter-options">
+          <select name="category">
+            <option value="all">All</option>
+            <option value="cooking">Cooking</option>
+            <option value="uncategorized">Uncategorized</option>
+          </select>
+          <select name="date">
+            <option value="all">All Dates</option>
+            <option value="april-2024">April 2024</option>
+          </select>
+        </div>
       </div>
-      
-    </div>
 
-        <div class="last">
-
-          
+      <div class="last">
         <div class="manage-users">
           <div class="user">
-            <input type="checkbox" class="checkboxes">
+            <input type="checkbox" class="checkboxes" />
             <p class="all">All</p>
 
             <div class="btn-all">
-                  
-                <button class="btn-unarchive"><i class='bx bx-archive-in'></i>Unarchive</button>
+              <button class="btn-unarchive">
+                <i class="bx bx-archive-in"></i>Unarchive
+              </button>
 
-                <button class="btn-del"><i class='bx bxs-trash'></i>Delete</button>
+              <button class="btn-del">
+                <i class="bx bxs-trash"></i>Delete
+              </button>
             </div>
-
           </div>
         </div>
 
+         <div class="last">
 
-        <div class="manage-users">
+
+        <div class="manage-posts">
           <div class="user">
-            
             <input type="checkbox" class="checkbox">
+
             
-    
-            <img src="/public/images/profile.png" alt="user" class="user-img">
-            <div class="user-info">
-                
-                <h3 class="user-name">Tips Cook <small>(17/12/2024)</small></h3>
-                
-              
-              
+            <div class="posts">
+              <div class="users">
+              <img src="/public/images/profile.png" alt="user" class="user-img">
+               <div class="user-infos">
+              <h3 class="user-name">Cooking tips <small>(Kanna Kamui)</small></h3>
+              <p>jdhgijgeooggeogk</p>
+
             </div>
-            <span>Active: 17/12/2024</span>
+             </div>
+
+            <img src="/public/images/food.png" class="food-img" width="350px">
+
+            </div>
+           
+            <span>Tips Cook: 17/12/2024</span>
             <div class="btn-group">
-              <button class="btn-lock">Unarchive</button>
+              <button class="btn-lock">Lock</button>
               <button class="btn-delete">Delete</button>
               <button class="btn-view">View</button>
             </div>
@@ -299,24 +311,28 @@
           </div>
         </div>
 
-        
-        <div class="manage-users">
+          <div class="manage-posts">
           <div class="user">
-            
             <input type="checkbox" class="checkbox">
+
             
-    
-            <img src="/public/images/profile.png" alt="user" class="user-img">
-            <div class="user-info">
-                
-                <h3 class="user-name">Tips Cook <small>(17/12/2024)</small></h3>
-                
-              
-              
+            <div class="posts">
+              <div class="users">
+              <img src="/public/images/profile.png" alt="user" class="user-img">
+               <div class="user-infos">
+              <h3 class="user-name">Cooking tips <small>(Kanna Kamui)</small></h3>
+              <p>jdhgijgeooggeogk</p>
+
             </div>
-            <span>Active: 17/12/2024</span>
+             </div>
+
+            <img src="/public/images/food.png" class="food-img" width="350px">
+
+            </div>
+           
+            <span>Tips Cook: 17/12/2024</span>
             <div class="btn-group">
-              <button class="btn-lock">Unarchive</button>
+              <button class="btn-lock">Lock</button>
               <button class="btn-delete">Delete</button>
               <button class="btn-view">View</button>
             </div>
@@ -324,39 +340,35 @@
           </div>
         </div>
 
-        
-        <div class="manage-users">
+           <div class="manage-posts">
           <div class="user">
-            
             <input type="checkbox" class="checkbox">
+
             
-    
-            <img src="/public/images/profile.png" alt="user" class="user-img">
-            <div class="user-info">
-                
-                <h3 class="user-name">Tips Cook <small>(17/12/2024)</small></h3>
-                
-              
-              
+            <div class="posts">
+              <div class="users">
+              <img src="/public/images/profile.png" alt="user" class="user-img">
+               <div class="user-infos">
+              <h3 class="user-name">Cooking tips <small>(Kanna Kamui)</small></h3>
+              <p>jdhgijgeooggeogk</p>
+
             </div>
-            <span>Active: 17/12/2024</span>
+             </div>
+
+            <img src="/public/images/food.png" class="food-img">
+
+            </div>
+           
+            <span>Tips Cook: 17/12/2024</span>
             <div class="btn-group">
-              <button class="btn-lock">Unarchive</button>
+              <button class="btn-lock">Lock</button>
               <button class="btn-delete">Delete</button>
               <button class="btn-view">View</button>
             </div>
 
           </div>
         </div>
-
-
-       </div>
-   
-
-
-      </section>
-
-  
+    </section>
 
     <script src="/public/javascript/sidebar.js"></script>
     <script src="/public/javascript/adminLock.js"></script>
