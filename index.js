@@ -48,13 +48,14 @@ app.get("/register", function (req, res) {
  
 // Handling user signup
 app.post("/register", async (req, res) => {
-    const user = await User.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password
-    });
-    console.log("logged")
+  const user = await User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
   });
+  console.log("logged");
+  res.redirect("/login");
+});
  
 //Showing login form
 app.get("/login", function (req, res) {
@@ -63,24 +64,26 @@ app.get("/login", function (req, res) {
  
 //Handling user login
 app.post("/login", async function(req, res){
-    try {
-        // check if the user exists
-        const user = await User.findOne({ username: req.body.username });
-        if (user) {
-          //check if password matches
-          const result = req.body.password === user.password;
-          if (result) {
-            res.render("secret");
-          } else {
-            res.status(400).json({ error: "password doesn't match" });
-          }
+  try {
+      // check if the user exists
+      const user = await User.findOne({ email: req.body.email });
+      console.log(req.body.email)
+      if (user) {
+        //check if password matches
+        const result = req.body.password === user.password;
+        if (result) {
+          res.render("landingPage");
         } else {
-          res.status(400).json({ error: "User doesn't exist" });
+          res.status(400).json({ error: "password doesn't match" });
         }
-      } catch (error) {
-        res.status(400).json({ error });
+      } else {
+        res.status(400).json({ error: "User doesn't exist" });
       }
+    } catch (error) {
+      res.status(400).json({ error });
+    }
 });
+
  
 //Handling user logout 
 app.get("/logout", function (req, res) {

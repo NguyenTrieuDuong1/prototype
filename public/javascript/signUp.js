@@ -157,7 +157,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
         document.getElementById("checkbox").checked
       ) {
         swal("Good job!", "You have successfully created an account!", "success");
-        document.getElementById("form").submit(); // Manually submit the form
+        document.getElementById('form').submit(); // Manually submit the form
 
       }
 });
