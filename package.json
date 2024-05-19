@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "cookie-session": "^2.1.0",
     "feather-icons": "^4.29.2",
+    "passport-cookie": "^1.0.9",
     "sweetalert": "^2.1.2"
   }
 }

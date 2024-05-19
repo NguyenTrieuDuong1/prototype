@@ -14,26 +14,32 @@ mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongo
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("express-session")({
-    secret: "Rusty is a dog",
+    secret: "real secret",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {maxAge: 28 * 24 * 60 * 60 * 1000}
 }));
- 
+
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session({
+    secret: "real secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {maxAge: 28 * 24 * 60 * 60 * 1000}
+}));
 app.use(express.static(__dirname + '/public'));
  
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
- 
+
 //=====================
 // ROUTES
 //=====================
  
 // Showing home page
 app.get("/", function (req, res) {
-    res.render("home");
+    res.render("landingPage", { username: req.user.username});
 });
  
 // Showing secret page
@@ -72,7 +78,7 @@ app.post("/login", async function(req, res){
         //check if password matches
         const result = req.body.password === user.password;
         if (result) {
-          res.render("landingPage");
+          res.redirect("/");
         } else {
           res.status(400).json({ error: "password doesn't match" });
         }
@@ -97,7 +103,7 @@ app.get("/logout", function (req, res) {
  
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
-    res.redirect("/login");
+    res.redirect("/landingPage");
 }
  
 let port = process.env.PORT || 3000;
