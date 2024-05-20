@@ -48,13 +48,22 @@ document.getElementById("submit").addEventListener("click", function(event) {
   document.getElementById("confirm-password").style.borderColor = "red";
   document.getElementById("checkbox").style.borderColor = "red";
 
+  
+ var nameValid = false;
+ var emailValid = false;
+ var passwordValid = false;
+ var confirmValid = false;
+
+  
   // Name validation
   if (name === "") {
     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     document.getElementById("name-error").innerHTML =
       iconErr + "Please enter your name";
+      nameValid = false;
   } else {
     document.getElementById("name").style.borderColor = "green"; // Set border color to green
+    nameValid = true;
   }
 
   // Email validation
@@ -62,6 +71,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     document.getElementById("email-error").innerHTML =
       iconErr + "Please enter your email";
+      emailValid = false;
   } else {
     var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
@@ -69,8 +79,10 @@ document.getElementById("submit").addEventListener("click", function(event) {
         '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
       document.getElementById("email-error").innerHTML =
         iconErr + "Please enter a valid email";
+        emailValid = false;
     } else {
       document.getElementById("email").style.borderColor = "green"; // Set border color to green
+      emailValid = true;
     }
   }
 
@@ -79,6 +91,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     document.getElementById("password-error").innerHTML =
       iconErr + "Please enter your password";
+      passwordValid = false;
   } else {
     var passwordError = document.getElementById("password-error");
     var hasLowerCase = /[a-z]/.test(password);
@@ -96,23 +109,30 @@ document.getElementById("submit").addEventListener("click", function(event) {
       const iconErr =
         '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
       passwordError.innerHTML = iconErr + "Password must contain: <br>";
+      passwordValid = false;
       if (!hasUpperCase) {
         passwordError.innerHTML += "At least one uppercase letter <br>";
+        passwordValid = false;
       }
       if (!hasLowerCase) {
         passwordError.innerHTML += "At least one lowercase letter <br>";
+        passwordValid = false;
       }
       if (!hasNumber) {
         passwordError.innerHTML += "At least one number <br>";
+        passwordValid = false;
       }
       if (!hasSpecialChar) {
         passwordError.innerHTML += "At least one special character <br>";
+        passwordValid = false;
       }
       if (!hasMinLength) {
         passwordError.innerHTML += "At least 8 characters long <br>";
+        passwordValid = false;
       }
     } else {
       document.getElementById("password").style.borderColor = "green"; // Set border color to green
+      passwordValid = true;
     }
   }
 
@@ -121,12 +141,15 @@ document.getElementById("submit").addEventListener("click", function(event) {
     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     document.getElementById("confirm-password-error").innerHTML =
       iconErr + "Please confirm your password";
+      confirmValid = false;
   } else if (password !== confirmPassword) {
     const iconErr = '<i class="fa-solid fa-circle-exclamation icon-error"></i>';
     document.getElementById("confirm-password-error").innerHTML =
       iconErr + "Passwords do not match";
+      confirmValid = false;
   } else {
     document.getElementById("confirm-password").style.borderColor = "green"; // Set border color to green
+    confirmValid = true;
   }
 
   // Checkbox validation
@@ -154,7 +177,11 @@ document.getElementById("submit").addEventListener("click", function(event) {
         email &&
         password &&
         confirmPassword &&
-        document.getElementById("checkbox").checked
+        document.getElementById("checkbox").checked &&
+        nameValid &&
+        emailValid &&
+        passwordValid &&
+        confirmValid
       ) {
         swal("Good job!", "You have successfully created an account!", "success");
         document.getElementById('form').submit(); // Manually submit the form
